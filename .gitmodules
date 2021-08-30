@@ -1,0 +1,3 @@
+[submodule "estore_frontend"]
+	path = estore_frontend
+	url = https://github.com/abhinav-gautam/e-store-mern-app-client.git
