@@ -1,0 +1,36 @@
+ Uploading Images
+---------------
+React:
+1.Create object of FormData
+2.Append image to formdata object
+3.Append product object to formData object
+
+4.Post form data obj to API
+
+API
+Create productsApi
+
+Configure Cloudinary
+----------------------
+install Cloudinary
+install multer (upload files to any target)
+install multer-storage-cloudinary
+
+In user registration, add user profile image field
+After login, place profile pic at top right corner of the page
+When new product is added, It shd navigate to view products automatically
+Design view products view
+
+Making authorized requests from React
+--------------------------------------
+Why to use token - 
+When to use token
+
+Steps:
+1.Get token from local storage
+2.Add token to header of req obj and send it
+
+3.Add middleware to verify token
+    Middleware whould check presence of token
+
+Bearer Authentication
