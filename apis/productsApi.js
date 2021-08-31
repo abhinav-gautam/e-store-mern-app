@@ -48,7 +48,9 @@ router.delete("/deleteProduct/:id", verifyToken, asyncHandler(async (req, res) =
 // Route to edit product by id
 router.put("/editProduct/:id", verifyToken, multerObj.single("productImage"), asyncHandler(async (req, res) => {
     const product = JSON.parse(req.body.product)
-    product.productImage = req.file.path
+    if (req.file) {
+        product.productImage = req.file.path
+    }
     delete product._id
     const id = req.params.id
     await products.updateOne({ _id: new ObjectId(id) }, { $set: product })
